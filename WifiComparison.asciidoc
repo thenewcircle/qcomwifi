@@ -5,8 +5,8 @@
 [options="header"]
 |===============================================================================
 |Android Wifi                                                     |QWifi
-|WifiInfo.java                                                    |QQWifiClient: WifiClientActivity.java
-|/frameworks/base/wifi/java/com/android/server/WifiManager.java   |-
+|WifiInfo.java                                                    |QWifiClient: QWifiClientActivity.java
+|/frameworks/base/wifi/java/com/android/server/WifiManager.java   |QWifiClient: QWifiManager.java
 |*Binder calls*|*Binder calls*
 |/frameworks/base/wifi/java/com/android/server/IWifiManager.aidl  |QWifiCommon: IQWifiService.aidl
 |/frameworks/base/services/java/com/android/server/WifiService.java    |QWifiService: IQWifiServiceImpl.java
