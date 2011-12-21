@@ -1,0 +1,13 @@
+
+Android Wifi                                                          QWifi
+===============================================================================
+Client:
+WifiInfo.java                                                         QWifiClientActivity.java
+/frameworks/base/wifi/java/com/android/server/WifiManager.java        -
+-------------- Binder calls ----------
+/frameworks/base/wifi/java/com/android/server/IWifiManager.aidl       IQWifiService.aidl
+/frameworks/base/services/java/com/android/server/WifiService.java    IQWifiServiceImpl.java
+/frameworks/base/wifi/java/com/android/server/WifiNative.java         QWifiLib.java
+--------------- JNI calls ------------
+/frameworks/base/core/jni/android_net_wifi_Wifi.cpp                   qcom_wifiservice_QWifiLib.c
+/hardware/libhardware_legacy/wifi/wifi.c                              qcom_wifiservice_lib.c
