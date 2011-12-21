@@ -6,7 +6,7 @@ import android.util.Log;
 import qcom.wificommon.IQWifiService;
 
 public class IQWifiServiceImpl extends IQWifiService.Stub {
-    static final String TAG = "IQWifiServiceImpl";
+    static final String TAG = "QWifi";
     
     @Override
     public int connect(String ssid) throws RemoteException {

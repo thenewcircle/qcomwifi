@@ -14,7 +14,7 @@ import android.view.View;
 import qcom.wificommon.IQWifiService;
 
 public class QWifiClientActivity extends Activity {
-    static final String TAG = "QWifiClientActivity";
+    static final String TAG = "QWifi";
     IQWifiService service;
     QWifiServiceConnection connection;
     static final Intent INTENT = new Intent("qcom.wificommon.IQWifiService");
