@@ -8,16 +8,22 @@ import qcom.wificommon.IQWifiService;
 public class IQWifiServiceImpl extends IQWifiService.Stub {
     static final String TAG = "QWifi";
     
+    QWifiLib qWifiLib;
+    
+    public IQWifiServiceImpl() {
+        qWifiLib = new QWifiLib();
+    }
+    
     @Override
     public int connect(String ssid) throws RemoteException {
         Log.d(TAG, "connect with ssid: "+ssid);
-        return 1;
+        return qWifiLib.connect(ssid);
     }
 
     @Override
     public int enableWifi() throws RemoteException {
         Log.d(TAG, "enableWifi");
-        return 1;
+        return qWifiLib.enableWifi();
     }
 
 }

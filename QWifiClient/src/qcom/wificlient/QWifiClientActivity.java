@@ -41,7 +41,7 @@ public class QWifiClientActivity extends Activity {
     /** Called when button in clicked. */
     public void onClick(View v) {
         try {
-            service.connect("MySSID");
+            Log.d(TAG, "onClick got: "+service.connect("MySSID") );
         } catch (RemoteException e) {
             Log.e(TAG, "Failed to connect to service", e);
         }
