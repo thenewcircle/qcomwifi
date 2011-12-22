@@ -10,6 +10,7 @@ import android.os.RemoteException;
 import android.util.Log;
 
 import qcom.wificommon.IQWifiService;
+import qcom.wificommon.QWifiInfo;
 
 public class QWifiManager {
     static final String TAG = "QWifi";
@@ -71,4 +72,12 @@ public class QWifiManager {
         return ret;
     }
 
+    public QWifiInfo getConnectionInfo() {
+        try {
+            return service.getConnectionInfo();
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to getConnectionInfo", e);
+            return null;
+        }
+    }
 }

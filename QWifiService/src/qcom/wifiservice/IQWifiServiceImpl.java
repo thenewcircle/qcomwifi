@@ -4,6 +4,7 @@ import android.os.RemoteException;
 import android.util.Log;
 
 import qcom.wificommon.IQWifiService;
+import qcom.wificommon.QWifiInfo;
 
 public class IQWifiServiceImpl extends IQWifiService.Stub {
     static final String TAG = "QWifi";
@@ -24,6 +25,11 @@ public class IQWifiServiceImpl extends IQWifiService.Stub {
     public int enableWifi() throws RemoteException {
         Log.d(TAG, "enableWifi");
         return qWifiLib.enableWifi();
+    }
+
+    @Override
+    public QWifiInfo getConnectionInfo() throws RemoteException {
+        return new QWifiInfo("MySSID", 123, 456);
     }
 
 }
