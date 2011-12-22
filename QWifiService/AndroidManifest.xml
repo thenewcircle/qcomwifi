@@ -6,14 +6,20 @@
 
     <uses-sdk android:minSdkVersion="14" />
 
+    <permission
+        android:name="qcom.permission.ACCESS_QCOMWIFI_SERVICE"
+        android:permissionGroup="android.permission-group.NETWORK"
+        android:protectionLevel="signature" >
+    </permission>
+
     <application>
-        
-        <service android:name=".QWifiService">
+        <service
+            android:name=".QWifiService"
+            android:permission="qcom.permission.ACCESS_QCOMWIFI_SERVICE" >
             <intent-filter>
-                <action android:name="qcom.wificommon.IQWifiService"/>
+                <action android:name="qcom.wificommon.IQWifiService" />
             </intent-filter>
         </service>
-        
     </application>
 
 </manifest>

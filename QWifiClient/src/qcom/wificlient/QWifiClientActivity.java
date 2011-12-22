@@ -26,13 +26,13 @@ public class QWifiClientActivity extends Activity {
         setContentView(R.layout.main);
         out = (TextView) findViewById(R.id.out);
         
-        Debug.startMethodTracing("QWifi.trace");
+//        Debug.startMethodTracing("QWifi.trace");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Debug.stopMethodTracing();
+//        Debug.stopMethodTracing();
     }
 
 
