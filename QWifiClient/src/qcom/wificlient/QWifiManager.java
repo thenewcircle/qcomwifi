@@ -11,6 +11,7 @@ import android.util.Log;
 
 import qcom.wificommon.IQWifiService;
 import qcom.wificommon.QWifiInfo;
+import qcom.wificommon.ScanListener;
 
 public class QWifiManager {
     static final String TAG = "QWifi";
@@ -51,7 +52,7 @@ public class QWifiManager {
         }
     }
     
-    /* Proxy methods */
+    /*----- Proxy methods -----*/
     public int connect(String ssid) {
         int ret = -1;
         try {
@@ -78,6 +79,14 @@ public class QWifiManager {
         } catch (RemoteException e) {
             Log.e(TAG, "Failed to getConnectionInfo", e);
             return null;
+        }
+    }
+    
+    public void startScan( ScanListener listener ) {
+        try {
+            service.startScan(listener);
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to startScan", e);
         }
     }
 }
