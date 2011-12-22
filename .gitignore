@@ -1,7 +1,7 @@
 # Compiled source #
 ###################
 *.com
-*.class
+*.Gclass
 *.dll
 *.exe
 *.o
@@ -43,3 +43,6 @@ Thumbs.db
 # Eclipse Artifacts #
 #####################
 .metadata/*
+
+
+*android-code/*
